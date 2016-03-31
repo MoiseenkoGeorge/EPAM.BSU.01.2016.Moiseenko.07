@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task4
 {
-    public static class BinarySearcher<T>
+    public static class BinarySearcher
     {
-        public static int BinarySearch(IList<T> array,T value,IComparer<T> comparator = null)
+        public static int BinarySearch<T>(this IList<T> array,T value,IComparer<T> comparator = null)
         {
             if (comparator == null)
                 comparator = Comparer<T>.Default;

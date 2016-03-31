@@ -14,7 +14,7 @@ namespace Task4.Tests
         public int BinarySearch_Test(int value, params int[] ints)
         {
             Array.Sort(ints);
-            return BinarySearcher<int>.BinarySearch(ints, value, null);
+            return ints.BinarySearch(value);
         }
     }
 }
