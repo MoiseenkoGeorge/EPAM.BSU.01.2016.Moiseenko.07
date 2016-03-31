@@ -28,9 +28,9 @@ namespace Task3
         public T Dequeue()
         {
             T returnValue = array[0];
-            T[] temp = new T[Capacity];
-            for (int i = 1; i < Count; i++)
-                temp[i] = array[i];
+            for (int i = 0; i < Count-1; i++)
+                array[i] = array[i+1];
+            Count--;
             return returnValue;
         }
 
