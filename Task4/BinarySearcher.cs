@@ -8,10 +8,10 @@ namespace Task4
 {
     public static class BinarySearcher<T>
     {
-        public static int BinarySearch(T[] array,T value,IComparer<T> comparator )
+        public static int BinarySearch(IList<T> array,T value,IComparer<T> comparator )
         {
-            if (comparator.Compare(value,array[array.Length]) > 0 || comparator.Compare(value,array[0]) < 0)  return -1;
-            int leftBorder = 0, rightBorder = array.Length, average;
+            if (comparator.Compare(value,array[array.Count]) > 0 || comparator.Compare(value,array[0]) < 0)  return -1;
+            int leftBorder = 0, rightBorder = array.Count, average;
             while (leftBorder < rightBorder)
             {
                 average = (leftBorder + rightBorder) / 2;
